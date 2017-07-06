@@ -2,15 +2,15 @@
 <?php
 	if($_POST){
 		//Get variables from post array
-		$first_name = mysql_real_escape_string($_POST['first_name']);
-		$last_name = mysql_real_escape_string($_POST['last_name']); 
-		$email = mysql_real_escape_string($_POST['email']); 
-		$password = mysql_real_escape_string(md5($_POST['password'])); 
-		$address = mysql_real_escape_string($_POST['address']);
-		$address2 = mysql_real_escape_string($_POST['address2']);
-		$city = mysql_real_escape_string($_POST['city']);
-		$state= mysql_real_escape_string($_POST['state']);
-		$zipcode = mysql_real_escape_string($_POST['zipcode']);
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name']; 
+		$email = $_POST['email']; 
+		$password = md5($_POST['password']); 
+		$address = $_POST['address'];
+		$address2 = $_POST['address2'];
+		$city = $_POST['city'];
+		$state= $_POST['state'];
+		$zipcode = $_POST['zipcode'];
 		
 		//Create customer query
 		$query ="INSERT INTO customers (first_name,last_name,email,password)
